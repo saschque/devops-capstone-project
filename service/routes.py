@@ -57,6 +57,7 @@ def create_accounts():
         jsonify(message), status.HTTP_201_CREATED, {"Location": location_url}
     )
 
+
 ######################################################################
 # LIST ALL ACCOUNTS
 ######################################################################
@@ -78,7 +79,6 @@ def list_all_accounts():
         message = [account.serialize() for account in account_list]
 
     return jsonify(message), response_status
-
 
 
 ######################################################################
